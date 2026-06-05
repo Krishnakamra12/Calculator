@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app" aria-label="Krishna's Calculator app">
+    <div class="topbar">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 48 48" fill="none" aria-label="Calculator logo">
+          <rect x="8" y="5" width="32" height="38" rx="9" stroke="currentColor" stroke-width="3"></rect>
+          <rect x="14" y="11" width="20" height="8" rx="3" fill="currentColor" opacity="0.2"></rect>
+          <path d="M17 26h4M27 26h4M17 33h4M27 33h4" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+        </svg>
+        <div class="brand-text">  
+          <h1>Calculator</h1>
+        </div>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+        <span class="sr-only">Toggle theme</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </div>
+
+    <section class="display" aria-live="polite">
+      <div class="expression" id="expression">0</div>
+      <div class="result" id="result">0</div>
+    </section>
+
+    <section class="keys" aria-label="Calculator controls">
+      <button class="key action" data-action="clear">AC</button>
+      <button class="key action" data-action="delete">DEL</button>
+      <button class="key operator" data-value="%">%</button>
+      <button class="key operator" data-value="/">÷</button>
+
+      <button class="key" data-value="7">7</button>
+      <button class="key" data-value="8">8</button>
+      <button class="key" data-value="9">9</button>
+      <button class="key operator" data-value="*">×</button>
+
+      <button class="key" data-value="4">4</button>
+      <button class="key" data-value="5">5</button>
+      <button class="key" data-value="6">6</button>
+      <button class="key operator" data-value="-">−</button>
+
+      <button class="key" data-value="1">1</button>
+      <button class="key" data-value="2">2</button>
+      <button class="key" data-value="3">3</button>
+      <button class="key operator" data-value="+">+</button>
+
+      <button class="key zero" data-value="0">0</button>
+      <button class="key" data-value=".">.</button>
+      <button class="key equal" data-action="calculate">=</button>
+    </section>
+
+    <p class="hint">Use mouse or keyboard: 0-9, +, -, *, /, %, Enter, Backspace, Esc.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
